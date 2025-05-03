@@ -1,0 +1,45 @@
+.menu-bar {
+    -fx-background-color: #f06292; /* Rosa más fuerte */
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.sidebar {
+    -fx-background-color: #f8bbd0; /* Fondo más profundo */
+    -fx-padding: 15px;
+}
+
+.sidebar Button {
+    -fx-background-color: #ec407a;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 10 14;
+    -fx-font-size: 13px;
+}
+
+.sidebar Button:hover {
+    -fx-background-color: #d81b60;
+}
+
+.section-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #880e4f;
+    -fx-font-size: 13.5px;
+    -fx-padding: 8 0 4 0;
+}
+
+.title-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ad1457;
+    -fx-font-weight: bold;
+    -fx-font-family: "Poppins";
+}
+.inactive-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #999;
+    -fx-font-weight: bold;
+    -fx-cursor: default;
+}

@@ -1,0 +1,173 @@
+/* 🌸 Fondo general de la ventana */
+.root {
+    -fx-background-color: #fdeff2; /* Un rosa pastel claro */
+    -fx-font-family: "Poppins", "Arial";
+}
+
+/* 🏷️ Labels con tonos oscuros */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a3d5c;
+    -fx-font-weight: bold;
+}
+
+/* ✏️ Estilos para campos de texto */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #ff85a2;
+    -fx-border-radius: 5px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+}
+
+/* 🔹 Efecto al hacer foco en los campos */
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #ff4f7c;
+    -fx-background-color: #fff0f5;
+}
+
+/* 📑 Área de texto con límite */
+.text-area {
+    -fx-pref-height: 80px;
+    -fx-wrap-text: true;
+}
+
+/* 📌 Contadores de caracteres */
+#descripcionCounter, #categoriaCounter {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5a3d5c;
+}
+
+/* 📸 Vista previa de imagen */
+#imagenProducto {
+    -fx-border-color: #ff85a2;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-color: white;
+}
+
+/* 🔘 Botón general */
+.button {
+    -fx-background-color: #ff69b4; /* 🌸 Rosa intenso */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 18px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #ff3b82;
+    -fx-border-width: 2px;
+}
+
+/* 🎭 Efecto hover en botón */
+.button:hover {
+    -fx-background-color: #ff1493; /* Un rosa más fuerte */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* 🎯 Botones de acción */
+#seleccionarImagenBtn {
+    -fx-background-color: #3498db; /* Azul */
+    -fx-text-fill: white;
+}
+
+#seleccionarImagenBtn:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* 🎯 Botones de CRUD */
+#agregarProducto {
+    -fx-background-color: #27ae60; /* Verde */
+}
+
+#agregarProducto:hover {
+    -fx-background-color: #219150;
+}
+
+#editarProducto {
+    -fx-background-color: #f39c12; /* Naranja */
+}
+
+#editarProducto:hover {
+    -fx-background-color: #e67e22;
+}
+
+#eliminarProducto {
+    -fx-background-color: #e74c3c; /* Rojo */
+}
+
+#eliminarProducto:hover {
+    -fx-background-color: #c0392b;
+}
+
+#cargarProductos {
+    -fx-background-color: #8e44ad; /* Púrpura */
+}
+
+#cargarProductos:hover {
+    -fx-background-color: #6c3483;
+}
+
+#limpiarSeleccion {
+    -fx-background-color: #95a5a6; /* Gris */
+}
+
+#limpiarSeleccion:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* 📋 Tablas con bordes y fondos rosados */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ff7eb3;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+}
+
+/* 📦 Columnas de la tabla */
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-size: 13px;
+    -fx-text-fill: #5a3d5c;
+    -fx-font-weight: bold;
+}
+
+/* 📌 Filas con colores alternados */
+.table-row-cell:odd {
+    -fx-background-color: #ffe6eb;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #fff5f7;
+}
+
+/* 🌟 Hover en filas de la tabla */
+.table-row-cell:hover {
+    -fx-background-color: #ffb6c1;
+}
+
+/* 🚀 Fila seleccionada en la tabla con un rosa fuerte */
+.table-row-cell:selected {
+    -fx-background-color: #ff4f7c; /* Rosa intenso */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ✨ Suavizar la transición de color al seleccionar */
+.table-row-cell:selected {
+    -fx-transition: background-color 0.3s ease-in-out;
+}
+
+/* ✅ Botones dentro de la tabla */
+.table-view .button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 4px 8px;
+    -fx-border-radius: 5px;
+}
+
+.table-view .button:hover {
+    -fx-background-color: #2980b9;
+}

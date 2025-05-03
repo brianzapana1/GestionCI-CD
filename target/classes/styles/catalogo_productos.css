@@ -1,0 +1,100 @@
+/* 🔹 Fondo general */
+VBox {
+    -fx-background-color: #FFE4E1;
+    -fx-padding: 15px;
+}
+
+/* 🔹 Título del catálogo */
+Label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #880E4F;
+    -fx-alignment: center;
+}
+
+/* 🔹 Estilo de la barra de búsqueda */
+HBox {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+    -fx-padding: 10px 0;
+}
+
+TextField {
+    -fx-pref-width: 300px;
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #D81B60;
+}
+
+/* 🔹 Estilo del botón de búsqueda */
+/* 🔹 Estilo general de botones */
+Button {
+    -fx-background-color: #E91E63; /* Rosa vibrante */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+/* 🔹 Específico para el botón de búsqueda */
+#txtBuscar + Button {
+    -fx-background-color: #E91E63;
+}
+
+/* 🔹 Hover */
+Button:hover {
+    -fx-background-color: #C2185B; /* Rosa oscuro */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* 🔹 Efecto de clic */
+Button:pressed {
+    -fx-background-color: #AD1457;
+}
+
+
+
+/* 🔹 Tarjetas de productos */
+.tile-pane {
+    -fx-hgap: 20px;
+    -fx-vgap: 20px;
+    -fx-alignment: center;
+}
+
+VBox {
+    -fx-background-color: white;
+    -fx-border-color: #D81B60;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 5, 5);
+}
+
+/* 🔹 Imágenes más grandes en tarjetas */
+ImageView {
+    -fx-fit-width: 200px;
+    -fx-fit-height: 150px;
+    -fx-preserve-ratio: true;
+}
+
+/* 🔹 Botón de cerrar */
+#btnCerrar {
+    -fx-background-color: #E91E63;
+}
+
+#btnCerrar:hover {
+    -fx-background-color: #C2185B;
+}
+
+/* 🔹 Texto de nombre del producto */
+.label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #880E4F;
+    -fx-font-size: 14px;
+}

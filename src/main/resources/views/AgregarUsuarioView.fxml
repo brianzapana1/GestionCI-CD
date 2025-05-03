@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.UsuarioController"
+      spacing="12"
+      alignment="CENTER"
+      stylesheets="@../styles/agregarUsuarios.css">
+    
+    <!-- Título -->
+    <Label text="Agregar Nuevo Usuario" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <!-- Contenedor de los campos de entrada -->
+    <VBox spacing="7">
+        <HBox spacing="10">
+            <Label text="Nombre:" alignment="CENTER_RIGHT" minWidth="100"/>
+            <TextField fx:id="nombreField" prefWidth="250"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Email:" alignment="CENTER_RIGHT" minWidth="100"/>
+            <TextField fx:id="emailField" prefWidth="250"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Usuario:" alignment="CENTER_RIGHT" minWidth="100"/>
+            <TextField fx:id="usuarioField" prefWidth="250"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Contraseña:" alignment="CENTER_RIGHT" minWidth="100"/>
+            <PasswordField fx:id="passwordField" prefWidth="250"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Rol:" alignment="CENTER_RIGHT" minWidth="100"/>
+            <ComboBox fx:id="rolComboBox" prefWidth="250"/>
+        </HBox>
+    </VBox>
+
+    <!-- Botón para registrar usuario -->
+    <Button fx:id="agregarUsuarioButton" text="Registrar Usuario" onAction="#agregarUsuario"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <!-- Mensaje de error o confirmación -->
+    <Label fx:id="mensajeLabel" text="" wrapText="true"
+           style="-fx-text-fill: red; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+</VBox>

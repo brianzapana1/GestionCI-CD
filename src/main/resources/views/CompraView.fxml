@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.CompraController"
+      stylesheets="@../styles/compra.css"
+      spacing="10" style="-fx-background-color: #f9f9f9;">
+      
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <!-- 🔹 Título -->
+    <Label text="Registrar Compra" styleClass="label-title"/>
+
+    <!-- 🔹 Formulario -->
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT"/>
+            <ColumnConstraints minWidth="250"/>
+            <ColumnConstraints halignment="RIGHT"/>
+            <ColumnConstraints minWidth="250"/>
+        </columnConstraints>
+
+        <!-- Proveedor -->
+        <Label text="Proveedor:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="proveedorComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Tipo Comprobante -->
+        <Label text="Tipo Comprobante:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <ComboBox fx:id="tipoComprobanteComboBox" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+        <!-- Número Compra -->
+        <Label text="Nro. Compra:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="numeroCompraField" GridPane.rowIndex="1" GridPane.columnIndex="1" editable="false"/>
+
+        <!-- Tipo de Pago -->
+        <Label text="Tipo de Pago:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <ComboBox fx:id="tipoPagoComboBox" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+    </GridPane>
+
+    <!-- 🔹 Botón agregar producto -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button fx:id="btnAgregarProducto" text="➕ Agregar Producto" onAction="#agregarProducto"/>
+    </HBox>
+
+    <!-- 🔹 Tabla de detalles -->
+    <TableView fx:id="tablaDetalles" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colProducto" text="Producto" prefWidth="200"/>
+            <TableColumn fx:id="colCantidad" text="Cantidad" prefWidth="100"/>
+            <TableColumn fx:id="colPrecio" text="Precio Unitario" prefWidth="130"/>
+            <TableColumn fx:id="colTotal" text="Total" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+    <!-- 🔹 Total General -->
+    <GridPane hgap="10" vgap="5" alignment="CENTER_RIGHT">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT"/>
+            <ColumnConstraints halignment="LEFT"/>
+        </columnConstraints>
+
+        <Label text="Total:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="totalLabel" text="Bs 0.00" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- 🔹 Botón guardar -->
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button fx:id="btnGuardar" text="💾 Guardar Compra" onAction="#guardarCompra"/>
+    </HBox>
+</VBox>

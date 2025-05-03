@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.inventario.controllers.CategoriaController"
+      spacing="10" alignment="CENTER"
+      style="-fx-padding: 20;"
+      stylesheets="@/styles/categoria.css">
+
+    <!-- ✅ Título -->
+    <Label text="Gestión de Categorías" styleClass="titulo-principal"/>
+
+    <!-- ✅ Tabla de Categorías -->
+    <TableView fx:id="tablaCategorias" prefHeight="200" prefWidth="350">
+        <columns>
+            <TableColumn fx:id="columnaNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="columnaDescripcion" text="Descripción" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- ✅ Formulario de Categoría -->
+    <VBox spacing="5">
+        <Label text="Nombre de la Categoría:" styleClass="etiqueta"/>
+        <TextField fx:id="nombreField" promptText="Ej: Electrónica" />
+
+        <Label text="Descripción (opcional):" styleClass="etiqueta"/>
+        <TextArea fx:id="descripcionField" promptText="Describe brevemente la categoría..." prefRowCount="3" />
+    </VBox>
+
+    <!-- ✅ Botones de Acción -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnGuardarCategoria" text="Guardar" onAction="#guardarCategoria" styleClass="btn-accion"/>
+        <Button fx:id="btnEliminarCategoria" text="Eliminar" onAction="#eliminarCategoria" styleClass="btn-eliminar"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.ClienteController" stylesheets="@../styles/cliente.css">
+
+    <!-- 🔹 Título -->
+    <Label text="Clientes Registrados" styleClass="titulo"/>
+    
+    <!-- 🔹 Sección de búsqueda / actualización -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtBuscar" promptText="Buscar por Nombre, Empresa, NIT o Razón Social..."/>
+        <Button text="🔄 Actualizar" onAction="#actualizarTablaClientes" styleClass="boton-buscar"/>
+    </HBox>
+
+
+    <!-- 🔹 Tabla de Clientes -->
+    <TableView fx:id="tablaClientes">
+        <columns>
+            <TableColumn fx:id="colEmpresa" text="Empresa" prefWidth="150"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colRazonSocial" text="Razón Social" prefWidth="200"/> <!-- ✅ Nueva columna -->
+            <TableColumn fx:id="colNIT" text="NIT" prefWidth="100"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200"/> <!-- ✅ Nueva columna -->
+        </columns>
+    </TableView>
+
+
+    <!-- 🔹 Botones de Acción -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnSeleccionar" text="✔ Seleccionar Cliente" onAction="#seleccionarCliente" styleClass="boton-principal"/>
+        <Button fx:id="btnAgregarCliente" text="➕ Nuevo Cliente" onAction="#abrirCRUDClientes" styleClass="boton-secundario"/>
+        <Button fx:id="btnCancelar" text="❌ Cancelar" onAction="#cerrarVentana" styleClass="boton-cancelar"/>
+    </HBox>
+</VBox>

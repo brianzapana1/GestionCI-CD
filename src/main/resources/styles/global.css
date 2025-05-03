@@ -1,0 +1,45 @@
+/* 🌍 Estilo Global - Minimalista Flat */
+.root {
+    -fx-background-color: #f9f9f9;
+    -fx-font-family: "Poppins", "Arial";
+}
+
+/* 🏷️ Labels en tono gris oscuro */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* ✏️ Campos de texto planos */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+/* Efecto al hacer foco */
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #3498db;
+}
+
+/* 🔘 Botones planos */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 3px;
+}
+
+/* Hover en botones */
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* 📋 Tablas minimalistas */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.ClienteCRUDController" stylesheets="@../styles/cliente.css">
+
+    <!-- 🔹 Título -->
+    <Label text="Gestión de Clientes" styleClass="titulo"/>
+
+    <!-- 🔹 Sección de Entrada de Datos -->
+    <GridPane hgap="20" vgap="10" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120" halignment="RIGHT"/>
+            <ColumnConstraints minWidth="200" halignment="LEFT"/>
+            <ColumnConstraints minWidth="120" halignment="RIGHT"/>
+            <ColumnConstraints minWidth="200" halignment="LEFT"/>
+        </columnConstraints>
+
+        <Label text="Empresa:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtEmpresa" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="200" promptText="Opcional"/>
+
+        <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="3" prefWidth="200" promptText="Opcional"/>
+
+        <!-- 🔹 Campos obligatorios con "*" -->
+        <Label text="Razón Social: *" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtRazonSocial" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="200" promptText="Obligatorio"/>
+
+        <Label text="NIT: *" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtNIT" GridPane.rowIndex="1" GridPane.columnIndex="3" prefWidth="120" promptText="Obligatorio"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="120" promptText="Opcional"/>
+
+        <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+        <TextField fx:id="txtEmail" GridPane.rowIndex="2" GridPane.columnIndex="3" prefWidth="200" promptText="Opcional"/>
+
+        <Label text="Dirección:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDireccion" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="3" prefWidth="450" promptText="Opcional"/>
+    </GridPane>
+
+    <!-- 🔹 Tabla de Clientes -->
+    <TableView fx:id="tablaClientes" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colEmpresa" text="Empresa" prefWidth="120"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="120"/>
+            <TableColumn fx:id="colRazonSocial" text="Razón Social" prefWidth="150"/>
+            <TableColumn fx:id="colNIT" text="NIT" prefWidth="100"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- 🔹 Botones de Acción -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Guardar" onAction="#guardarCliente" styleClass="boton-principal" prefWidth="100"/>
+        <Button text="Eliminar" onAction="#eliminarCliente" styleClass="boton-secundario" prefWidth="100"/>
+        <Button text="Limpiar" onAction="#limpiarCampos" styleClass="boton-secundario" prefWidth="100"/>
+        <Button fx:id="btnCancelar" text="Cerrar" onAction="#cerrarVentana" styleClass="boton-cancelar" prefWidth="100"/>
+    </HBox>
+</VBox>

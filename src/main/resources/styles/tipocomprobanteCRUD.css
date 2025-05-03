@@ -1,0 +1,67 @@
+.titulo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #880E4F;
+}
+
+.text-field {
+    -fx-pref-width: 250px;
+    -fx-padding: 5px;
+    -fx-border-color: #F48FB1;
+    -fx-border-radius: 5px;
+}
+
+/* 🔹 Botón principal */
+.boton-principal {
+    -fx-background-color: #C2185B;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+}
+
+/* ✨ Hover en botón principal */
+.boton-principal:hover {
+    -fx-background-color: #D81B60;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* 🔹 Botón secundario */
+.boton-secundario {
+    -fx-background-color: #F06292;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+}
+
+/* ✨ Hover en botón secundario */
+.boton-secundario:hover {
+    -fx-background-color: #EC407A;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* 🔹 Botón cancelar */
+.boton-cancelar {
+    -fx-background-color: #880E4F;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+}
+
+/* ✨ Hover en botón cancelar */
+.boton-cancelar:hover {
+    -fx-background-color: #AD1457;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* 🔹 Estilos para la tabla */
+.table-view {
+    -fx-background-color: #FCE4EC;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #F8BBD0;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.inventario.controllers.ReporteVentasController"
+            stylesheets="@../styles/reporteVentas.css">
+
+    <top>
+        <HBox alignment="CENTER" spacing="20" styleClass="barra-superior">
+            <Label text="Reporte de Ventas" styleClass="titulo"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <TableView fx:id="tablaReporteVentas" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colProducto" text="Producto" minWidth="150"/>
+                    <TableColumn fx:id="colCantidad" text="Cantidad" minWidth="80"/>
+                    <TableColumn fx:id="colPrecioCompra" text="Precio Compra" minWidth="100"/>
+                    <TableColumn fx:id="colPrecioVenta" text="Precio Venta" minWidth="100"/>
+                    <TableColumn fx:id="colUtilidad" text="Utilidad" minWidth="100"/>
+                    <TableColumn fx:id="colImpuesto3" text="3% Imp." minWidth="90"/>
+                    <TableColumn fx:id="colImpuesto13" text="13% Imp." minWidth="90"/>
+                    <TableColumn fx:id="colTotal" text="Total" minWidth="100"/>
+                    <TableColumn fx:id="colFecha" text="Fecha" minWidth="120"/> <!-- ✅ Nueva columna -->
+                </columns>
+            </TableView>
+
+            <HBox spacing="20" alignment="CENTER_RIGHT">
+                <Label text="Total Venta:" styleClass="label-total"/>
+                <TextField fx:id="txtTotalVenta" editable="false" styleClass="campo-total"/>
+                <Label text="Total Impuestos:" styleClass="label-total"/>
+                <TextField fx:id="txtTotalImpuestos" editable="false" styleClass="campo-total"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="panel-botones">
+            <padding>
+                <Insets top="10" right="15" bottom="15" left="15"/>
+            </padding>
+            <Button text="📄 Exportar PDF" onAction="#exportarPDF"/>
+            <Button text="🖨️ Imprimir" onAction="#imprimirReporte"/>
+        </HBox>
+    </bottom>
+</BorderPane>

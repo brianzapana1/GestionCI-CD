@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.ProductosController"
+      stylesheets="@../styles/productos.css"
+      spacing="6"
+      prefWidth="100.0" prefHeight="100.0" maxWidth="Infinity" maxHeight="Infinity"
+      VBox.vgrow="ALWAYS"
+      style="-fx-padding: 8; -fx-alignment: center; -fx-background-color: #f4f4f4;">
+
+    <!-- 🔹 TÍTULO -->
+    <Label text="Registro de Productos"
+           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <!-- 🔹 FORMULARIO Y VISTA PREVIA DE IMAGEN -->
+    <HBox spacing="12" alignment="CENTER" HBox.hgrow="ALWAYS">
+        <!-- 🔹 FORMULARIO -->
+        <GridPane hgap="6" vgap="4" style="-fx-alignment: center;" GridPane.hgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints minWidth="80" halignment="RIGHT"/>
+                <ColumnConstraints minWidth="140" halignment="LEFT"/>
+                <ColumnConstraints minWidth="200" halignment="RIGHT"/>
+                <ColumnConstraints minWidth="220" halignment="LEFT"/>
+            </columnConstraints>
+
+            <Label text="Código:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="codigoField" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="100"/>
+
+            <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <TextField fx:id="nombreField" GridPane.rowIndex="0" GridPane.columnIndex="3" prefWidth="220"/>
+
+            <Label text="Descripción:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <VBox GridPane.rowIndex="1" GridPane.columnIndex="1">
+                <TextArea fx:id="descripcionField" prefRowCount="1" wrapText="true" prefWidth="140"/>
+                <Label fx:id="descripcionCounter" text="0/200"
+                       style="-fx-font-size: 10px; -fx-text-fill: #555555;" />
+            </VBox>
+
+            <Label text="Categoría:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <HBox spacing="4" alignment="CENTER_LEFT" GridPane.rowIndex="1" GridPane.columnIndex="3">
+                <ComboBox fx:id="categoriaComboBox" promptText="Seleccionar categoría" prefWidth="180"/>
+                <Button fx:id="agregarCategoriaBtn" text="+" onAction="#abrirGestionCategorias"/>
+            </HBox>
+
+            <Label text="Fecha Vencimiento:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="fechaVencField" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="160"/>
+
+            <Label text="Estado:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="estadoCheckbox" text="Activo" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Imagen:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <HBox spacing="4" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                <Button fx:id="seleccionarImagenBtn" text="Seleccionar Imagen" onAction="#seleccionarImagen"/>
+                <Label fx:id="imagenPathLabel" text="No seleccionada"
+                       style="-fx-font-size: 10px; -fx-text-fill: #555555;" />
+            </HBox>
+        </GridPane>
+
+        <!-- 🔹 IMAGEN DE VISTA PREVIA -->
+        <VBox spacing="4" alignment="CENTER" style="-fx-padding: 4;" VBox.vgrow="ALWAYS">
+            <Label text="Vista Previa" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+            <StackPane style="-fx-border-color: #ccc; -fx-border-width: 1px; -fx-background-color: white;">
+                <ImageView fx:id="imagenProducto"
+                           fitWidth="280" fitHeight="180"
+                           preserveRatio="true" smooth="true"/>
+            </StackPane>
+        </VBox>
+    </HBox>
+
+    <!-- 🔹 BOTONES -->
+    <HBox spacing="4" alignment="CENTER" HBox.hgrow="ALWAYS">
+        <Button text="Agregar Producto" onAction="#agregarProducto"
+                style="-fx-background-color: #3498db; -fx-text-fill: white;" maxWidth="Infinity"/>
+        <Button text="Actualizar Producto" onAction="#editarProducto"
+                style="-fx-background-color: #f39c12; -fx-text-fill: white;" maxWidth="Infinity"/>
+        <Button text="Eliminar Producto" onAction="#eliminarProducto"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white;" maxWidth="Infinity"/>
+        <Button text="Actualizar Lista" onAction="#cargarProductos"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white;" maxWidth="Infinity"/>
+        <Button text="Limpiar" onAction="#limpiarSeleccion"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white;" maxWidth="Infinity"/>
+    </HBox>
+
+    <!-- 🔹 TABLA DE PRODUCTOS -->
+    <TableView fx:id="productosTable" onMouseClicked="#seleccionarProducto" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="codigoColumn" text="Código" prefWidth="80"/>
+            <TableColumn fx:id="nombreColumn" text="Nombre" prefWidth="180"/>
+            <TableColumn fx:id="descripcionColumn" text="Descripción" prefWidth="200"/>
+            <TableColumn fx:id="categoriaColumn" text="Categoría" prefWidth="150"/>
+            <TableColumn fx:id="fechaVencColumn" text="Vencimiento" prefWidth="130"/>
+            <TableColumn fx:id="estadoColumn" text="Estado" prefWidth="80"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.ProveedorController"
+      spacing="15"
+      alignment="TOP_CENTER"
+      stylesheets="@../styles/proveedor.css"
+      style="-fx-padding: 20; -fx-background-color: #fef2f5;">
+
+    <Label text="Gestión de Proveedores" styleClass="titulo-principal"/>
+
+    <!-- 🔹 Formulario dividido en columnas -->
+    <GridPane hgap="20" vgap="12" style="-fx-alignment: center;">
+        <columnConstraints>
+            <ColumnConstraints minWidth="180" halignment="RIGHT"/>
+            <ColumnConstraints minWidth="240"/>
+            <ColumnConstraints minWidth="180" halignment="RIGHT"/>
+            <ColumnConstraints minWidth="240"/>
+        </columnConstraints>
+
+        <!-- Columna izquierda -->
+        <Label text="Empresa:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="empresaField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Nombre:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="nombreField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Razón Social:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="razonSocialField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="NIT:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="nitField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Columna derecha -->
+        <Label text="Email:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+        <TextField fx:id="emailField" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <TextField fx:id="telefonoField" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+        <Label text="Dirección:" GridPane.rowIndex="2" GridPane.columnIndex="2" alignment="TOP_RIGHT"/>
+        <TextArea fx:id="direccionField" prefRowCount="2" wrapText="true"
+                  GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+    </GridPane>
+
+    <!-- 🔹 Botones -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="agregarBtn" text="Agregar" onAction="#agregarProveedor" styleClass="btn-agregar"/>
+        <Button fx:id="actualizarBtn" text="Actualizar" onAction="#actualizarProveedor" styleClass="btn-actualizar"/>
+        <Button fx:id="eliminarBtn" text="Eliminar" onAction="#eliminarProveedor" styleClass="btn-eliminar"/>
+        <Button fx:id="limpiarBtn" text="Limpiar" onAction="#limpiarCampos" styleClass="btn-limpiar"/>
+    </HBox>
+
+    <!-- 🔹 Tabla de Proveedores -->
+<TableView fx:id="tablaProveedores">
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+    </columnResizePolicy>
+        <columns>
+            <TableColumn fx:id="colEmpresa" text="Empresa" prefWidth="120"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="120"/>
+            <TableColumn fx:id="colRazonSocial" text="Razón Social" prefWidth="150"/>
+            <TableColumn fx:id="colNit" text="NIT" prefWidth="100"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

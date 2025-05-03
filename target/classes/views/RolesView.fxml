@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.RoleController"
+      spacing="15"
+      alignment="CENTER"
+      stylesheets="@../styles/roles.css">
+
+    <!-- Título -->
+    <Label text="🎚️ Gestión de Roles y Permisos" />
+
+    <!-- Tabla de Roles -->
+    <TableView fx:id="roleTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colTipo" text="Rol" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- Sección para agregar nuevo rol -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtNuevoRol" promptText="Nuevo rol"/>
+        <Button text="Agregar" fx:id="btnAgregar" onAction="#agregarRol"/>
+    </HBox>
+
+    <!-- Sección para actualizar rol -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtActualizarRol" promptText="Nuevo nombre del rol"/>
+        <Button text="Actualizar" fx:id="btnActualizar" onAction="#actualizarRol"/>
+    </HBox>
+
+    <!-- Botón para eliminar rol -->
+    <Button text="🗑️ Eliminar Rol Seleccionado" fx:id="btnEliminar" onAction="#eliminarRol"/>
+</VBox>

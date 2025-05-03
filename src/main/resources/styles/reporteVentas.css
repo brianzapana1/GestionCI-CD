@@ -1,0 +1,32 @@
+.barra-superior {
+    -fx-background-color: #ffc1e3;
+    -fx-alignment: center;
+    -fx-padding: 12px;
+}
+
+.titulo {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d81b60;
+}
+
+.table-view {
+    -fx-border-color: #f48fb1;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffe3ed;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f8bbd0;
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+    -fx-text-fill: #880e4f;
+}
+
+.resumen {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c2185b;
+}

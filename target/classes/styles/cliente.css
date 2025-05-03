@@ -1,0 +1,50 @@
+.titulo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #880E4F;
+    -fx-alignment: center;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-background-color: #FFD1DC;
+    -fx-border-color: #FF4081;
+    -fx-border-radius: 5px;
+}
+
+.boton-buscar {
+    -fx-background-color: #FF4081;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+}
+
+.boton-principal {
+    -fx-background-color: #D81B60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+}
+
+.boton-secundario {
+    -fx-background-color: #F06292;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+}
+
+.boton-cancelar {
+    -fx-background-color: #B71C1C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+}
+
+.boton-buscar:hover, .boton-principal:hover, .boton-secundario:hover, .boton-cancelar:hover {
+    -fx-opacity: 0.8;
+}

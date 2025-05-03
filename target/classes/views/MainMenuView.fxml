@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.inventario.controllers.MenuController"
+            stylesheets="@../styles/mainmenu.css"
+            prefWidth="100.0" prefHeight="100.0" maxWidth="Infinity" maxHeight="Infinity">
+
+    <!-- Menú superior -->
+    <top>
+        <MenuBar styleClass="menu-bar">
+            <Menu text="Archivo">
+                <MenuItem fx:id="cerrarSesionMenuItem" text="Cerrar Sesión" onAction="#cerrarSesion"/>
+                <MenuItem fx:id="salirMenuItem" text="Salir" onAction="#confirmarSalida"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Barra lateral con Scroll -->
+    <left>
+        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+            <VBox spacing="10" styleClass="sidebar" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+                <padding><Insets top="20" left="12" right="12" bottom="20"/></padding>
+
+                <Label text="📊 Inicio" styleClass="section-title"/>
+                <Button fx:id="inicioButton" text="🏠 Dashboard" disable="true" styleClass="inactive-button" maxWidth="Infinity"/>
+
+                <Label text="📦 Inventario" styleClass="section-title"/>
+                <Button fx:id="productosButton" text="📋 Productos" maxWidth="Infinity"/>
+                <Button fx:id="categoriasButton" text="📁 Categorías" maxWidth="Infinity"/>
+                <Button fx:id="inventarioButton" text="📦 Ver Inventario" maxWidth="Infinity"/>
+                <Button fx:id="proveedoresButton" text="🚚 Proveedores" maxWidth="Infinity"/>
+                <Button fx:id="cajaButton" text="💸 Registrar Compras" maxWidth="Infinity"/>
+
+                <Label text="🧾 Ventas" styleClass="section-title"/>
+                <Button fx:id="ventasButton" text="🛒 Registrar Ventas" maxWidth="Infinity"/>
+                <Button fx:id="reportesButton" text="📈 Reportes de Venta" maxWidth="Infinity"/>
+
+                <Label text="👥 Gestión" styleClass="section-title"/>
+                <Button fx:id="clientesButton" text="🙋 Clientes" maxWidth="Infinity"/>
+                <Button fx:id="usuariosButton" text="🧑‍💻 Usuarios" disable="true" styleClass="inactive-button" maxWidth="Infinity"/>
+                <Button fx:id="rolesButton" text="🎚️ Roles y Permisos" disable="true" styleClass="inactive-button" maxWidth="Infinity"/>
+
+                <Label text="⚙️ Configuración" styleClass="section-title"/>
+                <Button fx:id="configuracionButton" text="🧾 Tipos de Comprobante" maxWidth="Infinity"/>
+            </VBox>
+        </ScrollPane>
+    </left>
+
+    <!-- Contenido principal -->
+    <center>
+        <VBox fx:id="contentArea" alignment="CENTER" spacing="25" VBox.vgrow="ALWAYS" prefWidth="100.0" maxWidth="Infinity">
+            <padding><Insets top="40"/></padding>
+
+            <ImageView fx:id="logo" fitWidth="320" fitHeight="180" preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.png"/>
+                </image>
+            </ImageView>
+
+            <Label text="✨ Bienvenido a MAYECY"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #c2185b;" />
+
+            <Label text="Sistema de Gestión de Inventarios y Ventas"
+                   style="-fx-font-size: 16px; -fx-text-fill: #880e4f;" />
+        </VBox>
+    </center>
+</BorderPane>

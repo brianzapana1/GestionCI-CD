@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" prefWidth="600" prefHeight="400"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventario.controllers.TipoComprobanteController"
+      stylesheets="@../styles/tipoComprobante.css">
+
+    <!-- ✅ Título -->
+    <Label text="Seleccionar Tipo de Comprobante" styleClass="titulo"/>
+
+    <!-- 🔹 Campo de búsqueda -->
+    <TextField fx:id="txtBuscar" promptText="Buscar comprobante..." styleClass="campo-busqueda" maxWidth="500"/>
+
+    <!-- 🔹 Tabla de Comprobantes -->
+    <TableView fx:id="tablaComprobantes" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDescripcion" text="Descripción"/>
+            <TableColumn fx:id="colEstado" text="Estado"/>
+        </columns>
+    </TableView>
+
+    <!-- 🔹 Botones -->
+    <HBox spacing="10" alignment="CENTER">
+    <Button fx:id="btnSeleccionar" text="Seleccionar" onAction="#seleccionarComprobante" styleClass="boton-principal"/>
+        <Button text="Nuevo" onAction="#abrirCRUDComprobante" styleClass="boton-secundario"/>
+        <Button fx:id="btnCancelar" text="Cerrar" onAction="#cerrarVentana" styleClass="boton-cancelar"/>
+    </HBox>
+</VBox>

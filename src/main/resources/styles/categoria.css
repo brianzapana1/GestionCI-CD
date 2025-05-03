@@ -1,0 +1,69 @@
+/* ✅ Fondo general en tonos suaves de rosa */
+.root {
+    -fx-background-color: #FCE4EC; /* Rosa muy claro */
+    -fx-font-family: "Arial";
+}
+
+/* ✅ Estilo para el título principal */
+.titulo-principal {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #AD1457; /* Rosa oscuro */
+}
+
+/* ✅ Estilo para las etiquetas */
+.etiqueta {
+    -fx-font-weight: bold;
+    -fx-text-fill: #C2185B; /* Rosa intermedio */
+}
+
+/* ✅ Campos de texto */
+.text-field, .text-area {
+    -fx-background-color: #F8BBD0; /* Rosa claro */
+    -fx-border-color: #C2185B;      /* Borde rosa más oscuro */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+/* ✅ Botón de acción (Guardar) */
+.btn-accion {
+    -fx-background-color: #D81B60; /* Rosa fuerte */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-accion:hover {
+    -fx-background-color: #AD1457; /* Rosa oscuro al pasar el mouse */
+}
+
+/* ✅ Botón de eliminación */
+.btn-eliminar {
+    -fx-background-color: #E91E63; /* Rosa vibrante */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-eliminar:hover {
+    -fx-background-color: #C2185B; /* Rosa más oscuro al pasar el mouse */
+}
+
+/* ✅ Tabla de categorías */
+.table-view {
+    -fx-background-color: #F8BBD0;  /* Rosa claro */
+    -fx-border-color: #C2185B;      /* Borde rosa oscuro */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.table-column {
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-weight: bold;
+    -fx-text-fill: #880E4F; /* Texto en rosa profundo */
+}

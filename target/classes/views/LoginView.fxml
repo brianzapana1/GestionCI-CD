@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.inventario.controllers.LoginController"
+            stylesheets="@/styles/login.css"
+            prefWidth="950" prefHeight="550">
+
+    <!-- 🔹 Sección Izquierda: Imagen de la empresa -->
+    <left>
+        <VBox alignment="CENTER" styleClass="left-section" prefWidth="475">
+            <ImageView fx:id="logoImage" preserveRatio="true" fitWidth="350" fitHeight="350"/>
+            <Label text="BIENVENIDOS A MAYECY" styleClass="welcome-title"/>
+        </VBox>
+    </left>
+
+    <!-- 🔹 Sección Derecha: Formulario de Login -->
+    <center>
+        <VBox alignment="CENTER" spacing="25" styleClass="right-section" prefWidth="475">
+            
+            <!-- 🔹 Título del login más grande y elegante -->
+            <Label fx:id="tituloLabel" text="Iniciar Sesión" styleClass="login-title"/>
+            
+            <HBox spacing="10" styleClass="input-container">
+                <ImageView fitWidth="26" fitHeight="26">
+                    <image>
+                        <Image url="@/icons/user.png"/>
+                    </image>
+                </ImageView>
+                <TextField fx:id="usuarioField" promptText="Usuario" styleClass="input-field"/>
+            </HBox>
+
+            <HBox spacing="10" styleClass="input-container">
+                <ImageView fitWidth="26" fitHeight="26">
+                    <image>
+                        <Image url="@/icons/lock.png"/>
+                    </image>
+                </ImageView>
+                <PasswordField fx:id="passwordField" promptText="Contraseña" styleClass="input-field"/>
+            </HBox>
+
+            <!-- 🔹 Botones de Ingresar y Salir (ahora centrados) -->
+            <HBox spacing="40" alignment="CENTER" styleClass="button-container">
+                <Button fx:id="loginButton" text="Ingresar" onAction="#iniciarSesion" styleClass="login-button"/>
+                <Button fx:id="salirButton" text="Salir" onAction="#cerrarAplicacion" styleClass="exit-button"/>
+            </HBox>
+
+            <Label fx:id="mensajeLabel" text="" styleClass="error-label"/>
+        </VBox>
+    </center>
+
+</BorderPane>

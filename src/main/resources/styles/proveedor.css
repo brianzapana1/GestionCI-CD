@@ -1,0 +1,52 @@
+.titulo-principal {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c2185b; /* rosa oscuro */
+}
+
+.text-field, .text-area {
+    -fx-border-color: #ec407a;
+    -fx-border-width: 1px;
+    -fx-background-color: #fce4ec;
+}
+
+.table-view {
+    -fx-background-color: #f8bbd0;
+    -fx-border-color: #ec407a;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f06292;
+}
+
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #f06292;
+}
+
+.btn-agregar {
+    -fx-background-color: #f48fb1;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.btn-actualizar {
+    -fx-background-color: #f06292;
+    -fx-text-fill: white;
+}
+
+.btn-eliminar {
+    -fx-background-color: #d81b60;
+    -fx-text-fill: white;
+}
+
+.btn-limpiar {
+    -fx-background-color: #e1bee7;
+    -fx-text-fill: #4a148c;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-padding: 6 12;
+    -fx-background-radius: 5;
+    -fx-font-size: 13px;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      stylesheets="@../styles/catalogo_productos.css"
+      fx:controller="com.inventario.controllers.CatalogoProductosController">
+
+    <Label text="Catálogo de Productos"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-alignment: center;" />
+
+    <!-- 🔍 Barra de búsqueda y nuevo producto -->
+    <HBox spacing="10">
+        <TextField fx:id="txtBuscar" promptText="Buscar producto..." />
+        <Button text="🔍 Buscar" onAction="#filtrarProductos" />
+        <Button text="➕ Nuevo Producto"
+                onAction="#abrirFormularioNuevoProducto"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;" />
+    </HBox>
+
+    <!-- 🔹 Vista del catálogo -->
+    <ScrollPane fitToWidth="true">
+        <TilePane fx:id="tileProductos" hgap="15" vgap="15" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </TilePane>
+    </ScrollPane>
+
+    <!-- 🔚 Botón cerrar -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnCerrar" text="Cerrar" onAction="#cerrarCatalogo" />
+    </HBox>
+
+</VBox>
