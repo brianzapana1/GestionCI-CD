@@ -1,3 +1,4 @@
+//Prueba de commits para gestion (si ve esto inge, tuvimos problemas con el maven) :(
 package com.inventario.controllers;
 
 import java.util.List;
