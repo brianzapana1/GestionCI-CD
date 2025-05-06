@@ -18,7 +18,7 @@ import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
 public class ProveedorController {
-
+//Prueba para proveedor aceptado
     @FXML private TableView<Proveedor> tablaProveedores;
     @FXML private TableColumn<Proveedor, String> colEmpresa;
     @FXML private TableColumn<Proveedor, String> colNombre;
