@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 
+//prueba para el controlador del menu
 public class MenuController {
     @FXML private Button inicioButton;
     @FXML private Button productosButton;
