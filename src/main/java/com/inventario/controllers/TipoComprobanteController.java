@@ -23,7 +23,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class TipoComprobanteController {
-    private Stage stage; // Referencia a la ventana
+    private Stage stage; // Referencia a la ventana importante
 
     @FXML private TextField txtBuscar;
     @FXML private TableView<TipoComprobante> tablaComprobantes;
