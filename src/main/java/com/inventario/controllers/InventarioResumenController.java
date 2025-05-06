@@ -1,3 +1,4 @@
+
 package com.inventario.controllers;
 
 import java.io.File;
@@ -133,7 +134,7 @@ public class InventarioResumenController {
             System.err.println("❌ Error al generar PDF: " + e.getMessage());
         }
     }
-
+//Prueba controller de inventario, correccion de errores
     private Cell crearCeldaCabecera(String texto) {
         return new Cell().add(new Paragraph(texto))
                 .setBold()
