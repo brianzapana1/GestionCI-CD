@@ -60,6 +60,7 @@ public class RoleDAO {
         }
         return false;
     }
+    //modificacion prueba 3
 
     // Eliminar un rol
     public boolean eliminarRol(int idRol) {
