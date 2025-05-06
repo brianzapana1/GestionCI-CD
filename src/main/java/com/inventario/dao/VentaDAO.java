@@ -316,7 +316,7 @@ public class VentaDAO {
             }
 
         } catch (Exception e) {
-            System.err.println("❌ Error al obtener productos del recibo: " + e.getMessage());
+            System.err.println("❌ Error al obtener productos del recibo: " + e.getMessage()); //error al obtener producto
         }
 
         return productos;
