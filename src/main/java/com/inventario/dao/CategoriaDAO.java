@@ -155,6 +155,7 @@ public class CategoriaDAO {
         } catch (SQLException e) {
             System.err.println("❌ Error al eliminar categoría: " + e.getMessage());
             return false;
+            //prueba 
         }
     }
 }
