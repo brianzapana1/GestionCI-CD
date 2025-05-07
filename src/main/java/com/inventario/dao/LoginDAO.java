@@ -45,7 +45,7 @@ public class LoginDAO {
             stmt.setInt(1, idRol);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
-                    return rs.getString("tipoRol"); // Retorna "Administrador" o "Vendedor"
+                    return rs.getString("tipoRol"); 
                 }
             }
         } catch (SQLException e) {
