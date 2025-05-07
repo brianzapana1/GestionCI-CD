@@ -45,7 +45,7 @@ public class RoleDAO {
         return false;
     }
 
-    // Actualizar un rol existente
+    // Actualizacion de roles existentes
     public boolean actualizarRol(int idRol, String nuevoNombre) {
         String sql = "UPDATE public.roles SET tiporol = ? WHERE id_rol = ?";
         try (Connection conn = DatabaseConnection.getConnection();
