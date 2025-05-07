@@ -65,7 +65,7 @@ public class MenuController {
         usuariosButton.setOnAction(event -> abrirVentana("/views/AgregarUsuarioView.fxml", "Gestión de Usuarios")); // Crea si no lo tienes
         rolesButton.setOnAction(event -> abrirVentana("/views/RolesView.fxml", "Gestión de Roles"));
 
-        // ✅ Módulo: Ventas
+        // ✅ Módulo: Ventas actualziacion para pruebas
         ventasButton.setOnAction(event -> abrirVentana("/views/VentaView.fxml", "Registro de Ventas"));
         reportesButton.setOnAction(event -> abrirVentana("/views/ReporteVentaView.fxml", "Reporte de Ventas"));
 
