@@ -1,3 +1,4 @@
+
 package com.inventario.controllers;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class ClienteController {
     @FXML private Button btnSeleccionar;
     @FXML private Button btnCancelar;
     @FXML private Button btnAgregarCliente;
-    @FXML private Button btnCrearCliente; // 🔹 Nuevo botón para abrir el CRUD de clientes
+    @FXML private Button btnCrearCliente;
 
     private final ClienteService clienteService;
     private ObservableList<Cliente> listaClientes;
@@ -73,14 +74,7 @@ public class ClienteController {
         listaClientes = FXCollections.observableArrayList();
         tablaClientes.setItems(listaClientes);
     }
-    
 
-    /**
-     * 🔹 Carga los clientes en la tabla.
-     */
-    /**
- * 🔹 Carga los clientes en la tabla y escucha cambios en la base de datos.
- */
     private void cargarClientes() {
         List<Cliente> clientes = clienteService.listarClientes();
         listaClientes.setAll(clientes);
