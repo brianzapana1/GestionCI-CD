@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Compilar proyecto') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
     }
