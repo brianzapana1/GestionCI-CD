@@ -145,7 +145,6 @@ public class ReporteVentasController {
                 table.setWidth(UnitValue.createPercentValue(100));
     
                 // 🟣 Encabezados
-                // 🟣 Encabezados
                 table.addHeaderCell(new Cell().add(new Paragraph("Producto")).setBold());
                 table.addHeaderCell(new Cell().add(new Paragraph("Cantidad")).setBold());
                 table.addHeaderCell(new Cell().add(new Paragraph("Precio Compra")).setBold());
