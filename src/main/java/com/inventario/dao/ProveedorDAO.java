@@ -47,7 +47,7 @@ public class ProveedorDAO {
     }
 
     /**
-     * 🔎 Buscar proveedor por ID
+     * 🔎 Busqueda de proveedores por ID
      */
     public Proveedor obtenerPorId(int id) {
         String sql = "SELECT * FROM proveedores WHERE id_proveedor = ?";
