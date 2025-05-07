@@ -2,15 +2,36 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JDK 21'
+        jdk 'JDK 21'          
         maven 'Maven 3.9.9'
     }
 
     stages {
-        stage('Compilar proyecto') {
+        stage('Compilación') {
             steps {
-                bat 'mvn clean install'
+                bat 'mvn compile'
             }
+        }
+
+        stage('Pruebas') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+
+        stage('Empaquetado') {
+            steps {
+                bat 'mvn package'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Build completado exitosamente'
+        }
+        failure {
+            echo '❌ Hubo un error durante el pipeline'
         }
     }
 }
