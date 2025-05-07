@@ -56,7 +56,7 @@ public class TipoComprobanteDAO {
                 return new TipoComprobante(
                     rs.getInt("id_tipocomp"),
                     rs.getString("descripcion"),
-                    rs.getBoolean("estado") // ✅ Cambio aquí: `getBoolean()` en lugar de `getString()`
+                    rs.getBoolean("estado") 
                 );
             }
         } catch (SQLException e) {
