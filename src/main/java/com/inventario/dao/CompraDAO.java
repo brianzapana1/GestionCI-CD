@@ -14,7 +14,7 @@ import com.inventario.utils.DatabaseConnection;
 public class CompraDAO {
 
     public int registrarCompra(Compra compra) {
-        int idGenerado = -1; // Si falla, devolvemos -1
+        int idGenerado = -1; 
 
         String sql = "INSERT INTO compra (id_proveedor, id_usuario, id_tipocomp, numeroCompra, fecha, tipoPago, total, estado) " +
                      "VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id_compra";
