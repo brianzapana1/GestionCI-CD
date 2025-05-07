@@ -107,7 +107,7 @@ public class CompraDAO {
         }
     
         return 0;
-        //preuba
+        
     }
     
 }
