@@ -34,9 +34,10 @@ pipeline {
         stage('Despliegue Local') {
             steps {
                 echo '🎯 Ejecutando la aplicación local...'
-                bat 'java -jar target/Gestion-inventario-1.0-SNAPSHOT.jar'
+                bat 'java -jar target/Gestion-inventario-1.0-SNAPSHOT-shaded.jar'
             }
         }
+
     }
 
     post {
