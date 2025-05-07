@@ -1,3 +1,4 @@
+//ACtualiazcion para las pruebas de venta controlador
 package com.inventario.controllers;
 
 import java.io.File;
