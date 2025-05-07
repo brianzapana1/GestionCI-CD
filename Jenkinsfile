@@ -7,6 +7,12 @@ pipeline {
     }
 
     stages {
+        stage('Clonar Repositorio') {
+            steps {
+                git 'https://github.com/TU_USUARIO/TU_REPO.git'
+            }
+        }
+
         stage('Compilación') {
             steps {
                 bat 'mvn compile'
@@ -22,6 +28,13 @@ pipeline {
         stage('Empaquetado') {
             steps {
                 bat 'mvn package'
+            }
+        }
+
+        stage('Despliegue Local') {
+            steps {
+                echo '🎯 Ejecutando la aplicación local...'
+                bat 'java -jar target/Gestion-inventario-1.0-SNAPSHOT.jar'
             }
         }
     }
