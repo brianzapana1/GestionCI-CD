@@ -14,10 +14,10 @@ import java.util.Optional;
 import com.inventario.models.Categoria;
 import com.inventario.models.Producto;
 import com.inventario.services.CategoriaService;
-import com.inventario.services.ProductoService; // ✅ Importación para manejar categorías
+import com.inventario.services.ProductoService; 
 
 import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty; // ✅ Importación para el servicio de categorías
+import javafx.beans.property.SimpleStringProperty; 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -32,7 +32,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView; // ✅ Importación para ComboBox de categorías
+import javafx.scene.control.TableView; 
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -60,7 +60,7 @@ public class ProductosController {
     private Label descripcionCounter;
 
     @FXML
-    private ComboBox<Categoria> categoriaComboBox; // ✅ Reemplazo de TextField por ComboBox para categorías
+    private ComboBox<Categoria> categoriaComboBox;
     @FXML
     private Button agregarCategoriaBtn; // ✅ Botón para agregar nuevas categorías
 
