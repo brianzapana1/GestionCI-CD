@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar Repositorio') {
             steps {
-                git 'https://github.com/TU_USUARIO/TU_REPO.git'
+                git 'https://github.com/brianzapana1/GestionCI-CD.git'
             }
         }
 
